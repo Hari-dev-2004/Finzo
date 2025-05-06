@@ -1,0 +1,380 @@
+{
+  "courseId": "BSM001",
+  "courseTitle": "Basics of Stock Market",
+  "courseDescription": "A comprehensive introduction to stock markets, investing principles, and strategies for beginners. Learn everything from market fundamentals to making your first investment.",
+  "totalSections": 4,
+  "estimatedDuration": "2 hours",
+  "author": "Financial Education Team",
+  "lastUpdated": "2025-04-19",
+  "sections": [
+    {
+      "sectionId": 1,
+      "sectionTitle": "Understanding Stock Markets",
+      "progressPercentage": 25,
+      "content": [
+        {
+          "title": "What is a Stock Market?",
+          "body": "A stock market is a platform where buyers and sellers come together to trade shares of publicly listed companies. Think of it as a marketplace where ownership in businesses is bought and sold. When you buy a stock, you're purchasing a small piece of that company, making you a shareholder.\n\nStock markets serve several critical functions in the economy:\n\n• They provide companies with access to capital for growth and expansion\n• They create investment opportunities for individuals and institutions\n• They offer liquidity, allowing investors to convert their investments into cash\n• They provide transparent price discovery for company valuations"
+        },
+        {
+          "title": "Key Stock Market Participants",
+          "body": "Understanding who operates in the stock market helps grasp how it functions:\n\n• Investors: Individuals or institutions who buy shares with the expectation of generating returns\n• Companies: Organizations that issue shares to raise capital\n• Brokers: Intermediaries who execute buy and sell orders on behalf of investors\n• Market Makers: Specialized firms that maintain liquidity by continuously offering to buy and sell certain stocks\n• Regulators: Government bodies that oversee market activities to ensure fairness and transparency (like the SEC in the United States)"
+        },
+        {
+          "title": "Major Stock Exchanges",
+          "body": "Stock exchanges are organized marketplaces where securities are traded. Some prominent global exchanges include:\n\n• New York Stock Exchange (NYSE): The world's largest stock exchange by market capitalization\n• NASDAQ: Known for listing technology companies and using an electronic trading system\n• London Stock Exchange (LSE): One of Europe's oldest exchanges\n• Tokyo Stock Exchange (TSE): Japan's primary stock exchange\n• Bombay Stock Exchange (BSE): Asia's oldest stock exchange and India's leading exchange\n\nEach exchange has its own listing requirements, trading hours, and indices that track the performance of stocks listed on them."
+        },
+        {
+          "title": "Real-Life Example: The Apple Story",
+          "body": "Apple Inc. provides a compelling example of stock market dynamics. When Apple went public in December 1980, its stock was offered at $22 per share. Accounting for stock splits over the years, the original shares would be worth over 1500 times their initial value today.\n\nConsider someone who invested $1,000 in Apple's IPO. Their investment would have grown to over $1.5 million by 2025. This demonstrates how investing in fundamentally strong companies can create substantial wealth over time. However, this exceptional performance isn't typical – for every Apple success story, many companies have failed or shown modest returns.\n\nApple's stock journey also illustrates market volatility. During the 2008 financial crisis, Apple shares fell nearly 60% despite the company's strong fundamentals. Investors who panicked and sold missed the remarkable recovery and growth that followed. This highlights the importance of long-term perspective when investing in stocks."
+        }
+      ],
+      "quiz": {
+        "quizId": "BSM001-Q1",
+        "quizTitle": "Understanding Stock Markets Quiz",
+        "passingScore": 4,
+        "questions": [
+          {
+            "questionId": "Q1-1",
+            "questionText": "What does owning a company's stock represent?",
+            "options": [
+              "A loan to the company",
+              "Ownership of a portion of the company",
+              "A guaranteed annual income",
+              "Employment rights at the company"
+            ],
+            "correctAnswer": "Ownership of a portion of the company",
+            "explanation": "When you purchase a stock, you're buying partial ownership (equity) in that company, which makes you a shareholder with certain rights."
+          },
+          {
+            "questionId": "Q1-2",
+            "questionText": "Which of the following is NOT a primary function of stock markets?",
+            "options": [
+              "Providing companies with access to capital",
+              "Creating investment opportunities",
+              "Guaranteeing profits to all investors",
+              "Facilitating liquidity for investments"
+            ],
+            "correctAnswer": "Guaranteeing profits to all investors",
+            "explanation": "Stock markets never guarantee profits to investors. Investment always carries risk, and investors can lose money in stock markets."
+          },
+          {
+            "questionId": "Q1-3",
+            "questionText": "Which stock exchange is known for listing primarily technology companies?",
+            "options": [
+              "New York Stock Exchange (NYSE)",
+              "NASDAQ",
+              "London Stock Exchange (LSE)",
+              "Tokyo Stock Exchange (TSE)"
+            ],
+            "correctAnswer": "NASDAQ",
+            "explanation": "NASDAQ is particularly known for its concentration of technology companies and was the first electronic stock market."
+          },
+          {
+            "questionId": "Q1-4",
+            "questionText": "What role do brokers play in the stock market?",
+            "options": [
+              "They regulate market activities",
+              "They issue new shares to the public",
+              "They execute buy and sell orders for investors",
+              "They guarantee investment returns"
+            ],
+            "correctAnswer": "They execute buy and sell orders for investors",
+            "explanation": "Brokers act as intermediaries who execute trades on behalf of investors, providing access to markets that individuals couldn't access directly."
+          },
+          {
+            "questionId": "Q1-5",
+            "questionText": "What lesson can be learned from Apple's stock performance during the 2008 financial crisis?",
+            "options": [
+              "Tech stocks are immune to market downturns",
+              "Selling during market crashes is usually the best strategy",
+              "Long-term perspective is important when investing in fundamentally strong companies",
+              "Apple is guaranteed to provide high returns in the future"
+            ],
+            "correctAnswer": "Long-term perspective is important when investing in fundamentally strong companies",
+            "explanation": "Apple's stock fell significantly during the crisis despite strong fundamentals, but recovered and grew tremendously afterward. Investors with long-term perspectives who didn't panic-sell benefited most."
+          }
+        ]
+      }
+    },
+    {
+      "sectionId": 2,
+      "sectionTitle": "Stock Valuation and Analysis",
+      "progressPercentage": 50,
+      "content": [
+        {
+          "title": "Fundamental Analysis",
+          "body": "Fundamental analysis evaluates a company's intrinsic value by examining its financial statements, industry conditions, and economic factors. The goal is to determine if a stock is overvalued or undervalued relative to its 'true' worth.\n\nKey metrics and ratios used in fundamental analysis include:\n\n• Earnings Per Share (EPS): Net income divided by outstanding shares\n• Price-to-Earnings (P/E) Ratio: Share price divided by EPS\n• Price-to-Book (P/B) Ratio: Share price divided by book value per share\n• Debt-to-Equity Ratio: Total liabilities divided by shareholders' equity\n• Return on Equity (ROE): Net income divided by shareholders' equity\n\nAnalysts also evaluate qualitative factors such as management quality, competitive advantages, and industry trends."
+        },
+        {
+          "title": "Technical Analysis",
+          "body": "Unlike fundamental analysis, technical analysis focuses on statistical trends derived from trading activity, such as price movements and volume. Technical analysts believe that historical price patterns tend to repeat themselves.\n\nCommon technical analysis tools include:\n\n• Chart Patterns: Identifying formations like head and shoulders, double tops/bottoms\n• Moving Averages: Smoothed average prices over specific time periods\n• Relative Strength Index (RSI): Measures the speed and change of price movements\n• MACD (Moving Average Convergence Divergence): Shows relationship between two moving averages\n• Support and Resistance Levels: Price points where stocks historically reverse direction\n\nTechnical analysis is typically used for shorter-term trading decisions rather than long-term investments."
+        },
+        {
+          "title": "Understanding Market Capitalization",
+          "body": "Market capitalization (market cap) is the total value of a company's outstanding shares, calculated by multiplying the current share price by the number of shares outstanding. Companies are typically classified as:\n\n• Large-cap: Market cap of $10 billion or more\n• Mid-cap: Market cap between $2 billion and $10 billion\n• Small-cap: Market cap between $300 million and $2 billion\n• Micro-cap: Market cap below $300 million\n\nMarket cap helps investors understand a company's size and risk profile. Generally, large-cap companies are considered more stable but may offer slower growth, while small-cap companies might offer higher growth potential but with greater risk."
+        },
+        {
+          "title": "Real-Life Example: Warren Buffett's Value Investing",
+          "body": "Warren Buffett, one of history's most successful investors, exemplifies fundamental analysis in action. In 1988, Buffett began purchasing Coca-Cola shares when the company was facing challenges and investor sentiment was negative.\n\nBuffett's analysis revealed that despite temporary setbacks, Coca-Cola possessed tremendous value through its global brand recognition, distribution network, and consistent cash flows. He purchased about $1 billion of Coca-Cola stock, acquiring approximately 7% of the company.\n\nBy 2025, this investment had grown by over 1600%, proving the power of identifying undervalued companies based on strong fundamentals. Key to his approach was looking beyond short-term market fluctuations to identify intrinsic value that others missed.\n\nBuffett's famous quote, \"Be fearful when others are greedy, and greedy when others are fearful,\" captures the essence of successful value investing – buying quality companies at prices below their intrinsic value during times of market pessimism."
+        }
+      ],
+      "quiz": {
+        "quizId": "BSM001-Q2",
+        "quizTitle": "Stock Valuation and Analysis Quiz",
+        "passingScore": 4,
+        "questions": [
+          {
+            "questionId": "Q2-1",
+            "questionText": "What does the Price-to-Earnings (P/E) ratio measure?",
+            "options": [
+              "The company's total debt relative to its earnings",
+              "How much investors are willing to pay for each dollar of earnings",
+              "The annual dividend yield of the stock",
+              "How quickly the company is growing its revenue"
+            ],
+            "correctAnswer": "How much investors are willing to pay for each dollar of earnings",
+            "explanation": "The P/E ratio shows how much investors are paying for each dollar of company earnings, which helps assess if a stock is relatively expensive or cheap."
+          },
+          {
+            "questionId": "Q2-2",
+            "questionText": "Which of the following is NOT typically used in technical analysis?",
+            "options": [
+              "Chart patterns",
+              "Moving averages",
+              "Debt-to-Equity ratio",
+              "Volume indicators"
+            ],
+            "correctAnswer": "Debt-to-Equity ratio",
+            "explanation": "Debt-to-Equity ratio is a fundamental analysis metric that examines a company's financial structure, not a technical analysis tool."
+          },
+          {
+            "questionId": "Q2-3",
+            "questionText": "What is market capitalization?",
+            "options": [
+              "The total dollar value of a company's outstanding shares",
+              "The total profit a company has generated since its founding",
+              "The maximum price a stock has reached in its history",
+              "The percentage of market share a company holds in its industry"
+            ],
+            "correctAnswer": "The total dollar value of a company's outstanding shares",
+            "explanation": "Market capitalization is calculated by multiplying the current share price by the total number of outstanding shares, representing the company's total value according to the market."
+          },
+          {
+            "questionId": "Q2-4",
+            "questionText": "Which investment approach is Warren Buffett most associated with?",
+            "options": [
+              "Day trading",
+              "Value investing",
+              "Momentum investing",
+              "Index investing"
+            ],
+            "correctAnswer": "Value investing",
+            "explanation": "Warren Buffett is famous for his value investing approach, which focuses on identifying companies trading below their intrinsic value with strong fundamentals."
+          },
+          {
+            "questionId": "Q2-5",
+            "questionText": "Which type of company typically offers higher growth potential but with greater risk?",
+            "options": [
+              "Large-cap companies",
+              "Blue-chip companies",
+              "Small-cap companies",
+              "Dividend aristocrats"
+            ],
+            "correctAnswer": "Small-cap companies",
+            "explanation": "Small-cap companies generally have more room for growth compared to larger, more established companies, but they also tend to be more volatile and carry higher risk."
+          }
+        ]
+      }
+    },
+    {
+      "sectionId": 3,
+      "sectionTitle": "Investment Strategies and Portfolio Management",
+      "progressPercentage": 75,
+      "content": [
+        {
+          "title": "Types of Investment Strategies",
+          "body": "Different investment strategies suit different goals, risk tolerances, and time horizons:\n\n• Value Investing: Seeking stocks trading below their intrinsic value\n• Growth Investing: Focusing on companies with above-average growth potential\n• Income Investing: Prioritizing stocks that generate regular income through dividends\n• Index Investing: Replicating market indices to achieve market-average returns\n• Momentum Investing: Buying stocks showing upward price trends\n• Contrarian Investing: Going against prevailing market sentiment\n• Dollar-Cost Averaging: Investing fixed amounts at regular intervals regardless of price\n\nNo strategy is universally superior; each has advantages and drawbacks depending on market conditions and personal circumstances."
+        },
+        {
+          "title": "Diversification and Asset Allocation",
+          "body": "Diversification spreads investments across different assets to reduce risk. The principle is that losses in one area can be offset by gains elsewhere.\n\nEffective diversification includes:\n\n• Across Asset Classes: Stocks, bonds, real estate, commodities, etc.\n• Within Asset Classes: Different sectors, industries, company sizes\n• Geographic Diversification: Domestic and international investments\n• Time Diversification: Investing at different times to avoid timing risk\n\nAsset allocation—the proportion of different assets in your portfolio—should reflect your:\n\n• Investment goals (growth, income, preservation)\n• Time horizon (short-term, medium-term, long-term)\n• Risk tolerance (conservative, moderate, aggressive)\n• Current life stage (early career, mid-career, pre-retirement, retirement)"
+        },
+        {
+          "title": "Risk Management",
+          "body": "Understanding and managing risk is crucial for successful investing. Key risk management principles include:\n\n• Never invest money you can't afford to lose\n• Understand the risk-return relationship: higher potential returns typically come with higher risk\n• Set stop-loss orders to limit potential losses on individual positions\n• Rebalance your portfolio periodically to maintain your target asset allocation\n• Consider your overall financial situation, including emergency funds and insurance\n• Understand your personal risk tolerance and invest accordingly\n\nEmotional discipline is also essential—many investors underperform because they make decisions based on fear or greed rather than rational analysis."
+        },
+        {
+          "title": "Real-Life Example: The 2020 Market Crash and Recovery",
+          "body": "The COVID-19 pandemic triggered a dramatic market crash in March 2020, with major indices falling over 30% in just a few weeks. This real-world scenario illustrates several important investment principles:\n\n1. The unpredictability of market shocks: Even experienced economists didn't foresee the pandemic's impact.\n\n2. The value of diversification: Investors with diversified portfolios (including bonds, gold, and defensive stocks) experienced less severe drawdowns than those concentrated in vulnerable sectors like travel and entertainment.\n\n3. The danger of panic selling: Many investors who sold at the bottom missed the subsequent recovery. By August 2020, major indices had recovered their losses, and by 2021, they had reached new all-time highs.\n\n4. The effectiveness of dollar-cost averaging: Investors who continued regular contributions during the downturn benefited tremendously when the market recovered, as they purchased shares at discounted prices.\n\nConsider two hypothetical investors with $100,000 portfolios in January 2020:\n\nInvestor A panicked and sold everything in March 2020 at a 30% loss, leaving $70,000. They remained in cash until 2021 when they reinvested, missing the recovery.\n\nInvestor B maintained their long-term perspective, kept their allocation, and even added $500 monthly during the downturn. By December 2021, their portfolio had grown to approximately $145,000.\n\nThis example demonstrates how emotional discipline and adherence to sound investment principles can significantly impact outcomes during market volatility."
+        }
+      ],
+      "quiz": {
+        "quizId": "BSM001-Q3",
+        "quizTitle": "Investment Strategies and Portfolio Management Quiz",
+        "passingScore": 4,
+        "questions": [
+          {
+            "questionId": "Q3-1",
+            "questionText": "Which investment strategy involves purchasing shares of companies that are trading below their intrinsic value?",
+            "options": [
+              "Growth investing",
+              "Momentum investing",
+              "Value investing",
+              "Index investing"
+            ],
+            "correctAnswer": "Value investing",
+            "explanation": "Value investing focuses on identifying companies whose stocks are trading below their intrinsic or book value, essentially looking for bargains in the market."
+          },
+          {
+            "questionId": "Q3-2",
+            "questionText": "What is the primary purpose of diversification in investing?",
+            "options": [
+              "To guarantee higher returns",
+              "To reduce risk by spreading investments across different assets",
+              "To simplify tax reporting",
+              "To minimize trading fees"
+            ],
+            "correctAnswer": "To reduce risk by spreading investments across different assets",
+            "explanation": "Diversification spreads investments across different assets, sectors, or geographies to reduce risk, as losses in one area may be offset by gains in another."
+          },
+          {
+            "questionId": "Q3-3",
+            "questionText": "Which of the following is NOT a recommended risk management practice?",
+            "options": [
+              "Setting stop-loss orders",
+              "Putting all your money in one promising stock",
+              "Maintaining an emergency fund",
+              "Rebalancing your portfolio periodically"
+            ],
+            "correctAnswer": "Putting all your money in one promising stock",
+            "explanation": "Concentrating all your investment in a single stock, no matter how promising, violates the principle of diversification and exposes you to significant risk if that company underperforms."
+          },
+          {
+            "questionId": "Q3-4",
+            "questionText": "What investment approach involves investing fixed amounts at regular intervals regardless of share price?",
+            "options": [
+              "Market timing",
+              "Lump-sum investing",
+              "Dollar-cost averaging",
+              "Day trading"
+            ],
+            "correctAnswer": "Dollar-cost averaging",
+            "explanation": "Dollar-cost averaging involves investing a fixed amount regularly regardless of share price, resulting in buying more shares when prices are low and fewer when prices are high."
+          },
+          {
+            "questionId": "Q3-5",
+            "questionText": "Based on the 2020 market crash example, what was a key lesson for investors?",
+            "options": [
+              "It's best to sell quickly when markets begin to fall",
+              "Timing the market perfectly is the key to success",
+              "Emotional discipline and maintaining a long-term perspective can significantly impact outcomes",
+              "Diversification doesn't work during major market crashes"
+            ],
+            "correctAnswer": "Emotional discipline and maintaining a long-term perspective can significantly impact outcomes",
+            "explanation": "The example showed how investors who maintained discipline and a long-term perspective (Investor B) significantly outperformed those who made emotional decisions based on short-term market movements (Investor A)."
+          }
+        ]
+      }
+    },
+    {
+      "sectionId": 4,
+      "sectionTitle": "Practical Guide to Getting Started",
+      "progressPercentage": 100,
+      "content": [
+        {
+          "title": "Setting Investment Goals",
+          "body": "Clear investment goals provide direction and help measure progress. Effective goals are:\n\n• Specific: Define exactly what you're trying to achieve\n• Measurable: Quantify your target to track progress\n• Achievable: Set realistic expectations based on market realities\n• Relevant: Align with your broader financial plan\n• Time-bound: Establish a timeline for achieving the goal\n\nCommon investment goals include:\n\n• Retirement: Building a nest egg for financial independence\n• Education: Saving for college or other educational expenses\n• Home purchase: Accumulating a down payment\n• Emergency fund: Creating financial security\n• Wealth building: Growing assets for future opportunities\n\nYour investment approach should align with these goals—for example, long-term goals generally permit higher-risk, higher-return strategies, while short-term goals require more conservative approaches."
+        },
+        {
+          "title": "Choosing a Brokerage Account",
+          "body": "A brokerage account is necessary to buy and sell investments. Consider these factors when selecting a broker:\n\n• Fees and commissions: Look for low or zero-commission trading\n• Account minimums: Some brokers require minimum deposits\n• Investment options: Ensure they offer the securities you want to trade\n• Research and educational tools: Especially valuable for beginners\n• User interface: An intuitive platform makes trading easier\n• Customer service: Responsive support can be crucial when issues arise\n• Account protection: Verify SIPC coverage and additional insurance\n\nTypes of brokerage accounts include:\n\n• Standard taxable accounts: Basic investment accounts with no special tax treatment\n• Retirement accounts (IRA, Roth IRA, 401(k)): Offer tax advantages for retirement savings\n• Education accounts (529, Coverdell): Designed for education expenses\n• Custodial accounts (UGMA/UTMA): For minors, managed by an adult"
+        },
+        {
+          "title": "Making Your First Investment",
+          "body": "For beginners, these straightforward approaches provide a solid foundation:\n\n• Index funds: Passively managed funds that track market indices like the S&P 500\n• Exchange-Traded Funds (ETFs): Similar to index funds but trade like stocks throughout the day\n• Target-date funds: Automatically adjust asset allocation based on your target retirement date\n• Dividend stocks: Established companies that regularly distribute profits to shareholders\n• Blue-chip stocks: Large, well-established companies with stable earnings\n\nSteps to make your first investment:\n\n1. Open a brokerage account\n2. Fund your account\n3. Research your investment options\n4. Place your first trade\n5. Monitor your investments (but avoid obsessive checking)\n6. Reinvest dividends when possible\n7. Review and adjust your portfolio periodically"
+        },
+        {
+          "title": "Real-Life Example: The Power of Starting Early",
+          "body": "Consider the case of two hypothetical investors, Emily and Michael:\n\nEmily started investing $200 monthly at age 25, continuing until age 65. She invested a total of $96,000 over 40 years.\n\nMichael waited until age 35 to begin investing. To compensate for the late start, he invested $400 monthly (twice Emily's amount) until age 65, contributing a total of $144,000 over 30 years.\n\nAssuming both earned an average annual return of 8% (approximately the historical average of the S&P 500):\n\n• Emily's portfolio at age 65: Approximately $622,000\n• Michael's portfolio at age 65: Approximately $589,000\n\nDespite investing $48,000 less in total, Emily ended up with $33,000 more than Michael due to the power of compound returns over time. Her earlier contributions had decades to grow and compound.\n\nThis example demonstrates the concept Albert Einstein allegedly called \"the eighth wonder of the world\"—compound interest. The earlier you start investing, the more time your money has to work for you, even if you can only invest small amounts initially.\n\nThe key lesson: Time in the market is typically more important than timing the market. Starting early, even with modest amounts, can lead to remarkable long-term results."
+        }
+      ],
+      "quiz": {
+        "quizId": "BSM001-Q4",
+        "quizTitle": "Practical Guide to Getting Started Quiz",
+        "passingScore": 4,
+        "questions": [
+          {
+            "questionId": "Q4-1",
+            "questionText": "What characteristics should effective investment goals have?",
+            "options": [
+              "They should be ambitious, aggressive, and short-term",
+              "They should be specific, measurable, achievable, relevant, and time-bound",
+              "They should focus exclusively on maximizing returns",
+              "They should be flexible enough to change daily"
+            ],
+            "correctAnswer": "They should be specific, measurable, achievable, relevant, and time-bound",
+            "explanation": "Effective investment goals follow the SMART framework: Specific, Measurable, Achievable, Relevant, and Time-bound. This approach provides clarity and accountability."
+          },
+          {
+            "questionId": "Q4-2",
+            "questionText": "Which of the following is typically NOT a factor to consider when choosing a brokerage account?",
+            "options": [
+              "Fees and commissions",
+              "The broker's stock recommendations",
+              "Account minimums",
+              "User interface"
+            ],
+            "correctAnswer": "The broker's stock recommendations",
+            "explanation": "While some brokers do provide research and recommendations, these should not be a primary factor in choosing a broker, as they may have conflicts of interest. The other factors listed are more important considerations."
+          },
+          {
+            "questionId": "Q4-3",
+            "questionText": "Which investment option automatically adjusts asset allocation based on your target retirement date?",
+            "options": [
+              "Individual stocks",
+              "Index funds",
+              "Target-date funds",
+              "Corporate bonds"
+            ],
+            "correctAnswer": "Target-date funds",
+            "explanation": "Target-date funds automatically adjust their asset allocation from more aggressive to more conservative as the target retirement date approaches, making them convenient for long-term retirement planning."
+          },
+          {
+            "questionId": "Q4-4",
+            "questionText": "In the Emily and Michael example, why did Emily end up with more money despite investing less in total?",
+            "options": [
+              "She earned higher returns on her investments",
+              "She invested in riskier assets",
+              "Her contributions had more time to compound",
+              "She paid lower fees"
+            ],
+            "correctAnswer": "Her contributions had more time to compound",
+            "explanation": "Emily's earlier start gave her investments an additional 10 years to grow and compound, demonstrating the power of time in investment growth. This outweighed Michael's larger total contribution."
+          },
+          {
+            "questionId": "Q4-5",
+            "questionText": "What is the key lesson from the 'Power of Starting Early' example?",
+            "options": [
+              "It's better to wait and invest larger amounts later",
+              "Time in the market is typically more important than timing the market",
+              "Women are naturally better investors than men",
+              "Investing a fixed amount monthly is ineffective"
+            ],
+            "correctAnswer": "Time in the market is typically more important than timing the market",
+            "explanation": "The example demonstrates that starting early and staying invested consistently over time (time in the market) is generally more effective than trying to time market movements or waiting to invest larger sums later."
+          }
+        ]
+      }
+    }
+  ],
+  "userProgress": {
+    "userId": "",
+    "enrollmentDate": "",
+    "lastAccessDate": "",
+    "currentSection": 1,
+    "completedSections": [],
+    "quizScores": {},
+    "overallProgress": 0
+  }
+}

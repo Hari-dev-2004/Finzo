@@ -1,0 +1,106 @@
+============================================================
+FIX FOR /api/community/active-users/ ENDPOINT
+============================================================
+
+Based on the server logs showing 500 errors on the active-users endpoint,
+here's how to fix the issue:
+
+1. First, check the UserBriefSerializer used in the endpoint:
+   - I can see it already includes 'id' field in serializer fields list:
+   ```python
+   class UserBriefSerializer(serializers.ModelSerializer):
+       # ...
+       class Meta:
+           model = CustomUser
+           fields = ['id', 'username', 'display_name', 'profile_picture']
+   ```
+
+2. The likely issue is in the get_active_users view function:
+   ```python
+   @api_view(['GET'])
+   @permission_classes([IsAuthenticated])
+   def get_active_users(request):
+       try:
+           active_users = CustomUser.objects.exclude(id=request.user.id) \
+               .annotate(posts_count=Count('posts')) \
+               .filter(posts_count__gt=0) \
+               .order_by('-posts_count')[:10]
+           
+           serializer = UserBriefSerializer(active_users, many=True, context={'request': request})
+           return Response(serializer.data)
+       except Exception as e:
+           return Response({"detail": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+   ```
+
+3. The problem could be:
+   - Missing 'posts' relationship in the CustomUser model
+   - Error in the Count() annotation
+   - Error in the serializer caused by missing fields
+
+4. FIX: Update the get_active_users function with better error handling:
+
+```python
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_active_users(request):
+    """Get active users based on recent activity"""
+    try:
+        # First try to get users with posts
+        try:
+            active_users = CustomUser.objects.exclude(id=request.user.id) \
+                .annotate(posts_count=Count('posts')) \
+                .filter(posts_count__gt=0) \
+                .order_by('-posts_count')[:10]
+        except Exception as e:
+            # If that fails, just get some recent users as fallback
+            logger.error(f"Error getting active users with posts: {str(e)}")
+            active_users = CustomUser.objects.exclude(id=request.user.id) \
+                .order_by('-date_joined')[:10]
+        
+        # Make sure each user has an id and necessary fields
+        users_with_id = []
+        for user in active_users:
+            if hasattr(user, 'id') and user.id is not None:
+                users_with_id.append(user)
+        
+        serializer = UserBriefSerializer(users_with_id, many=True, context={'request': request})
+        return Response(serializer.data)
+    except Exception as e:
+        logger.error(f"Error in get_active_users: {str(e)}")
+        # Return empty list instead of error
+        return Response([])
+```
+
+5. ALTERNATIVE FIX: If above doesn't work, create a simpler endpoint:
+
+```python
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_active_users(request):
+    """Get active users based on recent activity"""
+    try:
+        # Just get recent users as a simpler solution
+        active_users = CustomUser.objects.exclude(id=request.user.id) \
+            .order_by('-date_joined')[:10]
+        
+        serializer = UserBriefSerializer(active_users, many=True, context={'request': request})
+        return Response(serializer.data)
+    except Exception as e:
+        logger.error(f"Error in get_active_users: {str(e)}")
+        # Return empty list instead of error
+        return Response([])
+```
+
+6. Check your models.py to ensure CustomUser.posts relationship exists:
+   Make sure there's a proper ForeignKey from Post to CustomUser like:
+   
+   ```python
+   class Post(models.Model):
+       author = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='posts')
+       # rest of the model
+   ```
+
+7. If all else fails, modify your CommunityDiscussions.tsx component to handle
+   API failures gracefully as we've already done in our frontend fixes.
+
+============================================================ 

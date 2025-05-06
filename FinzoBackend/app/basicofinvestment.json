@@ -1,0 +1,458 @@
+{
+  "courseId": "INV101",
+  "title": "Basics of Investment",
+  "description": "A comprehensive introduction to investment principles, strategies, and practical applications for beginners.",
+  "totalSections": 4,
+  "estimatedCompletionTime": "4 hours",
+  "sections": [
+    {
+      "sectionId": 1,
+      "title": "Understanding Investment Fundamentals",
+      "progress": "25%",
+      "content": [
+        {
+          "heading": "What is an Investment?",
+          "text": "An investment is the allocation of resources (usually money) with the expectation of generating income or profit over time. Unlike spending, where money is exchanged for immediate consumption, investing means committing resources now for a potential future benefit."
+        },
+        {
+          "heading": "Why Should You Invest?",
+          "text": "Investing allows your money to work for you through the power of compound interest and capital appreciation. It helps you stay ahead of inflation, build wealth over time, and achieve long-term financial goals like retirement, education funding, or major purchases."
+        },
+        {
+          "heading": "The Power of Compound Interest",
+          "text": "Compound interest is interest earned on both the initial principal and accumulated interest. This creates an exponential growth effect that significantly increases your wealth over time.",
+          "example": "If you invest $10,000 with an 8% annual return: After 10 years: ~$21,600. After 20 years: ~$46,600. After 30 years: ~$100,600. This demonstrates how starting early and staying invested can lead to substantial growth."
+        },
+        {
+          "heading": "Risk vs. Return Relationship",
+          "text": "Generally, higher potential returns come with higher risks. Understanding your risk tolerance—your ability and willingness to endure market volatility—is crucial to crafting an appropriate investment strategy.",
+          "example": "Low risk (Government bonds): 2-4% return with minimal volatility. Medium risk (Balanced portfolio): 5-8% return with moderate fluctuations. High risk (Growth stocks): 8-12%+ potential return with significant price swings."
+        },
+        {
+          "heading": "Investment Time Horizon",
+          "text": "Your time horizon—how long until you need the invested money—dramatically affects your investment choices. Longer time horizons allow you to withstand market fluctuations and potentially take more risk for higher returns.",
+          "example": "Short-term goals (1-3 years): High-yield savings, CDs, short-term bonds. Medium-term goals (3-10 years): Balanced mix of bonds and some stocks. Long-term goals (10+ years): Predominantly stocks for maximum growth potential."
+        },
+        {
+          "heading": "The Real-Life Impact of Starting Early",
+          "text": "Meet Sarah and Michael, both 25 years old. Sarah starts investing $200 monthly and continues until age 65. Michael waits until age 35 to begin investing $200 monthly until age 65. Assuming an 8% average annual return: Sarah (40 years of investing): Contributes $96,000 and ends with ~$622,000. Michael (30 years of investing): Contributes $72,000 and ends with ~$272,000. Despite investing only $24,000 more, Sarah ends up with about $350,000 more than Michael, demonstrating the profound impact of time on compound growth."
+        }
+      ],
+      "quiz": {
+        "passingScore": 4,
+        "questions": [
+          {
+            "id": "q1_1",
+            "question": "What is the primary difference between spending and investing?",
+            "options": [
+              "Spending requires more money than investing",
+              "Investing provides immediate benefits while spending provides future benefits",
+              "Spending is for immediate consumption while investing is for future returns",
+              "Investing is only for wealthy individuals while spending is for everyone"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Spending exchanges money for immediate consumption or benefit, while investing allocates resources now with the expectation of generating future returns."
+          },
+          {
+            "id": "q1_2",
+            "question": "Which principle explains why investments grow exponentially over long periods?",
+            "options": [
+              "Market timing",
+              "Compound interest",
+              "Dollar-cost averaging",
+              "Risk diversification"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Compound interest means earning interest not just on your initial investment but also on previously accumulated interest, creating an exponential growth effect."
+          },
+          {
+            "id": "q1_3",
+            "question": "According to the risk-return relationship, which statement is most accurate?",
+            "options": [
+              "Low-risk investments always outperform high-risk investments",
+              "High-risk investments guarantee higher returns",
+              "Higher potential returns generally come with higher risk",
+              "Risk and return have no correlation"
+            ],
+            "correctAnswer": 2,
+            "explanation": "The fundamental relationship between risk and return states that investments with higher potential returns typically carry higher risk."
+          },
+          {
+            "id": "q1_4",
+            "question": "Why is understanding your time horizon important for investing?",
+            "options": [
+              "It determines how much money you need to start investing",
+              "It affects which types of investments are appropriate for your goals",
+              "It tells you exactly how much your investments will be worth",
+              "It guarantees you won't lose money in the market"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Your time horizon affects which investment types are suitable. Longer horizons typically allow for more aggressive growth-oriented investments, while shorter horizons call for more conservative choices."
+          },
+          {
+            "id": "q1_5",
+            "question": "In the example of Sarah and Michael, why did Sarah end up with significantly more money despite only contributing $24,000 more?",
+            "options": [
+              "She invested in riskier assets",
+              "She had a higher interest rate on her investments",
+              "She started investing 10 years earlier, giving her money more time to compound",
+              "She invested larger amounts each month"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Sarah started investing 10 years earlier than Michael, allowing her investments more time to benefit from compound growth. This demonstrates the significant advantage of starting to invest early."
+          }
+        ]
+      }
+    },
+    {
+      "sectionId": 2,
+      "title": "Types of Investments and Asset Classes",
+      "progress": "50%",
+      "content": [
+        {
+          "heading": "Common Investment Asset Classes",
+          "text": "The investment world includes several major asset classes, each with distinct characteristics, risk profiles, and potential returns. Understanding these differences helps you build a diversified portfolio aligned with your goals."
+        },
+        {
+          "heading": "Cash and Cash Equivalents",
+          "text": "These include savings accounts, money market accounts, certificates of deposit (CDs), and Treasury bills. They offer high liquidity and safety but typically provide the lowest returns, often barely keeping pace with inflation.",
+          "example": "During the 2008 financial crisis, many investors temporarily shifted to cash positions, accepting the low returns in exchange for safety and liquidity. While they preserved capital during market declines, those who stayed in cash too long missed the subsequent market recovery."
+        },
+        {
+          "heading": "Fixed Income: Bonds",
+          "text": "Bonds represent loans to governments or corporations. The borrower promises to pay interest periodically and return the principal at maturity. Bonds generally offer moderate returns with lower volatility than stocks.",
+          "example": "Consider a $1,000 10-year Treasury bond with a 3% coupon rate. You'll receive $30 annually in interest payments and get your $1,000 back after 10 years. Corporate bonds might pay 4-6% but carry more risk if the company struggles financially."
+        },
+        {
+          "heading": "Equities: Stocks",
+          "text": "Stocks represent ownership in companies. They offer the highest potential returns among traditional assets but also come with higher volatility and risk. Stocks can provide both capital appreciation and income through dividends.",
+          "example": "An investment of $10,000 in Amazon stock in 2010 would have grown to over $180,000 by 2023. However, during that same period, investors experienced multiple instances where the stock dropped 20% or more in value before recovering."
+        },
+        {
+          "heading": "Real Estate",
+          "text": "Property investments can generate returns through rental income and appreciation in property value. Real estate often moves differently from stocks and bonds, making it valuable for diversification. Options include direct ownership, Real Estate Investment Trusts (REITs), and real estate funds.",
+          "example": "According to historical data, a property purchased in a growing metropolitan area for $300,000 in 2000 might be worth around $750,000 by 2023, while also potentially generating rental income throughout that period."
+        },
+        {
+          "heading": "Alternative Investments",
+          "text": "These include commodities, precious metals, cryptocurrencies, private equity, venture capital, and collectibles. Alternatives often have different return patterns than traditional investments but may be less liquid or more complex.",
+          "example": "An investment in gold during the 2008 financial crisis would have performed well as investors sought safe havens. Gold rose from about $800 per ounce in 2008 to over $1,900 in 2011, while stocks were still recovering from significant losses."
+        },
+        {
+          "heading": "Investment Vehicles and Accounts",
+          "text": "Beyond asset classes, investors need to understand different investment vehicles and account types, including mutual funds, ETFs, index funds, retirement accounts (401(k)s, IRAs), and taxable brokerage accounts. These vehicles provide different ways to hold assets, with varying tax implications, fee structures, and accessibility."
+        },
+        {
+          "heading": "Real-Life Portfolio Example",
+          "text": "Maria, a 35-year-old professional with a moderate risk tolerance and 25-year time horizon before retirement: 60% in stock index funds (providing broad market exposure), 25% in bond funds (adding stability), 10% in international stocks (geographic diversification), and 5% in REITs (real estate exposure). This diversified approach gives her growth potential while managing risk."
+        }
+      ],
+      "quiz": {
+        "passingScore": 4,
+        "questions": [
+          {
+            "id": "q2_1",
+            "question": "Which asset class historically offers the highest long-term returns?",
+            "options": [
+              "Cash equivalents",
+              "Bonds",
+              "Stocks",
+              "Treasury bills"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Historically, stocks (equities) have provided the highest average returns over long time periods, outperforming bonds, cash, and most other asset classes, despite experiencing greater volatility."
+          },
+          {
+            "id": "q2_2",
+            "question": "What is a key characteristic of bonds as an investment?",
+            "options": [
+              "They represent ownership in a company",
+              "They offer the highest potential returns",
+              "They represent loans to entities that pay interest",
+              "They are completely risk-free"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Bonds represent loans to governments, municipalities, or corporations. The borrower promises to pay periodic interest and return the principal at maturity."
+          },
+          {
+            "id": "q2_3",
+            "question": "Why might investors include real estate in their investment portfolio?",
+            "options": [
+              "It's completely liquid and can be sold instantly",
+              "It typically moves differently from stocks and bonds, aiding diversification",
+              "It's guaranteed to increase in value every year",
+              "It requires no maintenance or management"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Real estate often has a low correlation with stocks and bonds, meaning it may perform differently under the same market conditions, which helps diversify a portfolio and potentially reduce overall risk."
+          },
+          {
+            "id": "q2_4",
+            "question": "Which investment vehicle pools money from many investors to purchase a diversified portfolio of stocks or bonds?",
+            "options": [
+              "Certificate of Deposit",
+              "Savings Account",
+              "Mutual Fund",
+              "Treasury Bond"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Mutual funds pool money from multiple investors to invest in a diversified portfolio of securities, providing instant diversification and professional management."
+          },
+          {
+            "id": "q2_5",
+            "question": "In the example of Maria's portfolio, why did she allocate 10% to international stocks?",
+            "options": [
+              "International stocks are always safer than domestic stocks",
+              "To achieve geographic diversification in her portfolio",
+              "Because international stocks always outperform domestic stocks",
+              "To avoid paying any investment taxes"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Maria allocated 10% to international stocks to achieve geographic diversification, as different economic regions may perform differently at various times, potentially reducing overall portfolio risk."
+          }
+        ]
+      }
+    },
+    {
+      "sectionId": 3,
+      "title": "Investment Strategies and Portfolio Construction",
+      "progress": "75%",
+      "content": [
+        {
+          "heading": "Fundamental Investment Principles",
+          "text": "Before exploring specific strategies, it's important to understand the core principles that underpin successful investing: diversification, asset allocation, rebalancing, and the importance of keeping costs low."
+        },
+        {
+          "heading": "Diversification: Don't Put All Your Eggs in One Basket",
+          "text": "Diversification means spreading investments across various assets to reduce risk. By holding different investments that don't move in perfect sync, you can potentially reduce volatility without sacrificing returns.",
+          "example": "During the dot-com bubble burst of 2000-2002, technology stocks lost over 70% of their value. Investors who had diversified across multiple sectors experienced much smaller overall portfolio declines, as sectors like utilities, consumer staples, and healthcare held up relatively well during the same period."
+        },
+        {
+          "heading": "Asset Allocation: The Most Important Decision",
+          "text": "Asset allocation—how you divide investments among stocks, bonds, cash, and other asset classes—determines roughly 90% of a portfolio's return variability. This decision should reflect your risk tolerance, time horizon, and financial goals.",
+          "example": "Compare two investors during the 2008 financial crisis: Investor A with 80% stocks/20% bonds saw their portfolio decline roughly 35% at the worst point. Investor B with 50% stocks/50% bonds experienced a more manageable 20% decline. Their asset allocation decision had far more impact than which specific stocks or bonds they selected."
+        },
+        {
+          "heading": "Active vs. Passive Investing",
+          "text": "Active investing attempts to outperform market indexes through security selection or market timing. Passive investing aims to match market performance by tracking indexes. Research consistently shows most active managers underperform their benchmarks after fees, particularly over longer periods.",
+          "example": "Warren Buffett famously won a $1 million bet that an S&P 500 index fund would outperform a collection of hedge funds over 10 years (2008-2017). The index fund returned 125.8% over the period, while the selected hedge funds averaged only 36.3%."
+        },
+        {
+          "heading": "Dollar-Cost Averaging",
+          "text": "This strategy involves investing fixed amounts at regular intervals, regardless of market prices. It removes emotion from investing, potentially lowers average cost per share, and creates a disciplined investment habit.",
+          "example": "During 2020's market volatility due to COVID-19, an investor consistently investing $500 monthly would have purchased fewer shares when prices were high in January and February, but many more shares during March's market crash, resulting in a lower average cost per share than someone who invested all at once before the crash."
+        },
+        {
+          "heading": "Value Investing",
+          "text": "Value investors look for stocks trading below their intrinsic value—companies with strong fundamentals but temporarily depressed prices. This approach requires patience and conviction to buy when others are fearful.",
+          "example": "After the 2008 financial crisis, many bank stocks traded at deep discounts to their book value. JPMorgan Chase traded below $20 in March 2009 (less than 0.7 times book value). By 2021, it traded above $160, representing over 700% return for patient value investors who recognized the bank's strong position even during the crisis."
+        },
+        {
+          "heading": "Growth Investing",
+          "text": "Growth investors focus on companies with above-average growth potential, often paying premium valuations for companies expected to grow earnings faster than the market average.",
+          "example": "An investor who recognized the growth potential of Netflix in 2010 (when it was primarily a DVD-by-mail service transitioning to streaming) would have seen their investment grow by over 2,000% in a decade as the company revolutionized entertainment consumption globally."
+        },
+        {
+          "heading": "Creating Your Investment Plan",
+          "text": "A comprehensive investment plan should consider: 1) Your financial goals and time horizons, 2) Risk tolerance assessment, 3) Asset allocation strategy, 4) Investment selection criteria, 5) Regular review and rebalancing schedule, and 6) Tax optimization strategies.",
+          "example": "The Smith family created an investment plan with three distinct portfolios: 1) A conservative portfolio for their emergency fund and short-term goals (80% bonds/20% stocks), 2) A moderate portfolio for their children's education in 10 years (50% stocks/50% bonds), and 3) An aggressive portfolio for retirement in 30 years (85% stocks/15% bonds). Each portfolio has a specific purpose, risk profile, and time horizon."
+        },
+        {
+          "heading": "Behavioral Finance: Understanding Your Biases",
+          "text": "Many investment mistakes stem from psychological biases rather than technical errors. Common biases include loss aversion (feeling losses more strongly than equivalent gains), recency bias (overweighting recent events), confirmation bias (seeking information that confirms existing beliefs), and herd mentality (following the crowd).",
+          "example": "During Bitcoin's surge to nearly $20,000 in 2017, many investors jumped in near the peak due to fear of missing out (FOMO) and herd mentality. When it subsequently crashed to below $4,000, many sold at a loss due to panic, only to miss the eventual recovery and new highs years later. This pattern of buying high and selling low is classic behavioral finance in action."
+        }
+      ],
+      "quiz": {
+        "passingScore": 4,
+        "questions": [
+          {
+            "id": "q3_1",
+            "question": "What is the primary purpose of diversification in an investment portfolio?",
+            "options": [
+              "To guarantee higher returns",
+              "To eliminate all investment risk",
+              "To reduce portfolio volatility without necessarily sacrificing returns",
+              "To maximize tax efficiency"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Diversification aims to reduce risk by spreading investments across various assets that don't move in perfect correlation, potentially lowering volatility without sacrificing returns."
+          },
+          {
+            "id": "q3_2",
+            "question": "According to research, what factor determines approximately 90% of a portfolio's return variability?",
+            "options": [
+              "Market timing",
+              "Stock selection",
+              "Asset allocation",
+              "Investment fees"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Studies have shown that asset allocation—how you divide investments among stocks, bonds, cash, and other asset classes—determines roughly 90% of a portfolio's return variability over time."
+          },
+          {
+            "id": "q3_3",
+            "question": "What is dollar-cost averaging?",
+            "options": [
+              "Investing all your money at once to maximize returns",
+              "Investing a fixed amount at regular intervals regardless of market prices",
+              "Timing your investments to buy only when prices are low",
+              "Converting foreign currency to dollars before investing"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Dollar-cost averaging involves investing fixed amounts at regular intervals regardless of market prices, which creates discipline and can lower the average cost per share over time."
+          },
+          {
+            "id": "q3_4",
+            "question": "Which investment approach looks for companies trading below their intrinsic value?",
+            "options": [
+              "Momentum investing",
+              "Growth investing",
+              "Index investing",
+              "Value investing"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Value investing focuses on identifying and purchasing securities that appear to be underpriced compared to their intrinsic value—companies with strong fundamentals but temporarily depressed prices."
+          },
+          {
+            "id": "q3_5",
+            "question": "Which behavioral bias causes investors to feel the pain of losses more strongly than the pleasure of equivalent gains?",
+            "options": [
+              "Confirmation bias",
+              "Recency bias",
+              "Loss aversion",
+              "Herd mentality"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Loss aversion is the tendency to feel the psychological impact of losses more strongly than equivalent gains. This can lead investors to hold losing investments too long or avoid taking appropriate risks."
+          }
+        ]
+      }
+    },
+    {
+      "sectionId": 4,
+      "title": "Practical Investment Implementation and Monitoring",
+      "progress": "100%",
+      "content": [
+        {
+          "heading": "Getting Started: Opening Investment Accounts",
+          "text": "Before you can begin investing, you need appropriate accounts. Consider tax-advantaged accounts like 401(k)s and IRAs for retirement goals, 529 plans for education, and taxable brokerage accounts for general investing. Research platforms based on fees, available investments, tools, research, and customer service."
+        },
+        {
+          "heading": "Building Your First Portfolio",
+          "text": "For beginners, simplicity is powerful. Consider starting with broadly diversified, low-cost index funds or ETFs that provide exposure to large portions of the market in a single investment.",
+          "example": "A three-fund portfolio consisting of: 1) A total US stock market index fund, 2) A total international stock market index fund, and 3) A total bond market index fund can provide extensive diversification with minimal complexity. For someone with a moderate risk tolerance, allocations might be 50% US stocks, 30% international stocks, and 20% bonds."
+        },
+        {
+          "heading": "Fundamental Analysis: Evaluating Individual Investments",
+          "text": "When considering individual stocks or bonds, fundamental analysis evaluates the financial health and business prospects of companies or issuers. Key metrics include P/E ratio, debt-to-equity ratio, profit margins, revenue growth, dividend yield, and cash flow.",
+          "example": "When evaluating Apple as a potential investment, you might analyze: 1) Revenue growth (examining iPhone, services, and wearables segments), 2) Profit margins compared to competitors, 3) Balance sheet strength ($200+ billion in cash reserves), 4) Return on equity trends, 5) P/E ratio relative to historical averages and sector peers, and 6) Future growth catalysts like new product categories or services."
+        },
+        {
+          "heading": "Investment Costs and Their Impact",
+          "text": "Fees can significantly erode returns over time. Common investment costs include expense ratios on funds, trading commissions, advisory fees, account maintenance fees, and loads (sales charges).",
+          "example": "Consider two otherwise identical $10,000 investments growing at 7% annually for 30 years: Investment A has a 0.1% expense ratio (typical of low-cost index funds) and grows to approximately $74,000. Investment B has a 1% expense ratio (common for actively managed funds) and grows to only about $57,000. The 0.9% difference in fees costs nearly $17,000 over time—about 23% of the potential final value."
+        },
+        {
+          "heading": "Tax-Efficient Investing",
+          "text": "Strategic placement of investments across account types can minimize tax drag. Generally, tax-inefficient investments (like bonds, REITs, and actively traded funds) work best in tax-advantaged accounts, while tax-efficient investments (like index funds and long-term stock holdings) can go in taxable accounts.",
+          "example": "Maria holds her bond funds in her 401(k) where the regular interest payments are tax-deferred, while keeping her low-turnover stock index fund in her taxable account where she benefits from long-term capital gains rates and tax-loss harvesting opportunities."
+        },
+        {
+          "heading": "Monitoring and Rebalancing",
+          "text": "Regular portfolio review is essential but doesn't mean constant trading. Set a schedule (quarterly, semi-annually, or annually) to check if your asset allocation has drifted from targets due to market movements. Rebalance when allocations drift beyond predetermined thresholds (typically 5-10%).",
+          "example": "John's target allocation is 60% stocks and 40% bonds. After a strong bull market, his portfolio drifts to 70% stocks and 30% bonds. To rebalance, he sells some stock funds and buys bond funds to return to his target allocation. This systematic approach forces him to 'sell high and buy low' without attempting to time the market."
+        },
+        {
+          "heading": "When to Adjust Your Strategy",
+          "text": "While frequent changes are counterproductive, legitimate reasons to adjust your investment strategy include: significant life changes (marriage, children, job change), approaching financial goals, substantial changes in financial situation, major shifts in risk tolerance, or entering retirement.",
+          "example": "Alexandra maintained an aggressive 90% stock portfolio throughout her career. Five years before retirement, she began gradually shifting to a more conservative allocation, reducing stock exposure by about 5% annually. By retirement, her portfolio was 65% stocks and 35% bonds/cash, balancing growth needs for a 25+ year retirement with reduced vulnerability to market downturns when withdrawals would begin."
+        },
+        {
+          "heading": "Common Investment Pitfalls to Avoid",
+          "text": "Successful investing requires avoiding common mistakes: 1) Trying to time the market, 2) Chasing past performance, 3) Letting emotions drive decisions, 4) Neglecting to diversify sufficiently, 5) Paying excessive fees, 6) Trading too frequently, 7) Focusing on short-term noise instead of long-term goals.",
+          "example": "During the COVID-19 market crash in March 2020, the S&P 500 fell approximately 34% in just 33 days. Investors who panic-sold locked in losses and likely missed the subsequent recovery, where the market recouped all losses by August 2020 and continued to new highs. Those who maintained their long-term strategy and continued regular investments during the downturn benefited enormously from the recovery."
+        },
+        {
+          "heading": "Real-Life Success Story: The Power of Consistency",
+          "text": "Consider the case of David, who began investing $400 monthly in a low-cost, globally diversified portfolio at age 22 with his first job. Despite going through the 2008 financial crisis, the 2020 COVID crash, and several smaller corrections, he never stopped his regular investments. Some months he bought at market highs, others at significant discounts during downturns. By age 42, after 20 years of consistent investing, his portfolio grew to over $250,000 despite starting with zero. The combination of disciplined saving, broad diversification, low costs, and time transformed a modest monthly commitment into substantial wealth."
+        }
+      ],
+      "quiz": {
+        "passingScore": 4,
+        "questions": [
+          {
+            "id": "q4_1",
+            "question": "What is a key advantage of starting with index funds for beginning investors?",
+            "options": [
+              "They guarantee higher returns than other investments",
+              "They eliminate all investment risk",
+              "They provide broad diversification in a single, typically low-cost investment",
+              "They are only available in tax-advantaged accounts"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Index funds provide exposure to large segments of the market in a single investment, offering broad diversification with typically low costs—ideal characteristics for beginning investors."
+          },
+          {
+            "id": "q4_2",
+            "question": "In the example comparing two investments with different expense ratios, what was the approximate percentage impact of the higher fee over 30 years?",
+            "options": [
+              "About 5% of the final value",
+              "About 10% of the final value",
+              "About 23% of the final value",
+              "About 50% of the final value"
+            ],
+            "correctAnswer": 2,
+            "explanation": "The 0.9% higher expense ratio reduced the final value by approximately $17,000 on a $74,000 potential value, representing about 23% of the final value. This demonstrates how seemingly small fee differences compound significantly over time."
+          },
+          {
+            "id": "q4_3",
+            "question": "What is the primary purpose of rebalancing a portfolio?",
+            "options": [
+              "To increase returns by timing the market",
+              "To maintain your target risk level by restoring original asset allocations",
+              "To eliminate the need for diversification",
+              "To reduce investment taxes"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Rebalancing returns your portfolio to its target asset allocation when market movements cause it to drift, maintaining your intended risk level and investment strategy."
+          },
+          {
+            "id": "q4_4",
+            "question": "According to the content, which investment tends to be more tax-efficient in taxable accounts?",
+            "options": [
+              "Bond funds that generate regular interest income",
+              "REITs with high dividend distributions",
+              "Actively traded stock funds with frequent capital gains distributions",
+              "Low-turnover stock index funds"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Low-turnover stock index funds tend to be tax-efficient in taxable accounts because they generate fewer capital gains distributions and may qualify for more favorable long-term capital gains tax rates."
+          },
+          {
+            "id": "q4_5",
+            "question": "In the example of investors during the COVID-19 market crash, what lesson was illustrated?",
+            "options": [
+              "The importance of selling quickly when markets decline",
+              "The value of maintaining a long-term strategy during market volatility",
+              "The benefits of keeping all investments in cash during uncertain times",
+              "The advantage of investing only during market highs"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The COVID-19 market crash example illustrates the importance of maintaining a long-term strategy during market volatility, as those who panic-sold locked in losses while those who stayed invested benefited from the relatively quick recovery."
+          }
+        ]
+      }
+    }
+  ],
+  "userProgress": {
+    "userId": "",
+    "currentSection": 1,
+    "sectionsCompleted": [],
+    "quizzesCompleted": [],
+    "quizScores": [],
+    "overallProgress": "0%",
+    "enrollmentDate": "",
+    "lastAccessDate": ""
+  }
+}

@@ -1,0 +1,323 @@
+============================================================
+IMPLEMENTING AUTO-INCREMENTING USER IDs
+============================================================
+
+## 1. Overview
+
+This guide details implementing an auto-incrementing user ID system while preserving Django's authentication functionality. This will involve:
+
+1. Adding a display_id field to the CustomUser model
+2. Creating a migration to add the field
+3. Updating serializers to include the new field
+4. Modifying views to handle user retrieval by ID
+5. Updating the frontend to use the new IDs
+
+## 2. Backend Implementation
+
+### Step 1: Modify the CustomUser Model
+
+First, modify the CustomUser model in `FinzoBackend/app/models.py`:
+
+```python
+class CustomUser(AbstractUser):
+    # Existing fields
+    email = models.EmailField(unique=True)
+    phone_number = models.CharField(max_length=15, blank=True, null=True)
+    bio = models.TextField(blank=True, null=True)
+    profile_picture = models.ImageField(upload_to='profile_pictures/', blank=True, null=True)
+    # ... other existing fields ...
+    
+    # New fields
+    display_id = models.CharField(max_length=10, unique=True, blank=True, null=True)
+    
+    # Keep existing Meta class, fields, etc.
+    
+    def save(self, *args, **kwargs):
+        if not self.display_id:
+            # Get the latest user with a display_id
+            latest_user = CustomUser.objects.filter(
+                display_id__isnull=False
+            ).order_by('-id').first()
+            
+            # Generate the next ID
+            if latest_user and latest_user.display_id and latest_user.display_id.startswith('U'):
+                try:
+                    # Extract number from the latest ID and increment
+                    last_id_num = int(latest_user.display_id[1:])
+                    next_id_num = last_id_num + 1
+                except (ValueError, IndexError):
+                    # If extraction fails, start from 1
+                    next_id_num = 1
+            else:
+                # No existing users with display_id
+                next_id_num = 1
+                
+            # Format as U00001, U00002, etc.
+            self.display_id = f'U{next_id_num:05d}'
+            
+        # Call the original save method
+        super().save(*args, **kwargs)
+```
+
+### Step 2: Create and Apply Migration
+
+```bash
+# Generate the migration
+python manage.py makemigrations app
+
+# Apply the migration
+python manage.py migrate
+```
+
+### Step 3: Update UserSerializer
+
+In `FinzoBackend/app/serializers.py`, modify the UserSerializer:
+
+```python
+class UserSerializer(serializers.ModelSerializer):
+    # Existing fields
+    profile_picture = serializers.SerializerMethodField()
+    # ... other fields ...
+    
+    class Meta:
+        model = CustomUser
+        fields = ['id', 'display_id', 'username', 'email', 'first_name', 'last_name', 
+                 'profile_picture', 'bio', 'phone_number', 'date_joined']
+        # Add any other fields you need
+    
+    # Keep existing methods
+    def get_profile_picture(self, obj):
+        # Existing implementation
+        pass
+```
+
+### Step 4: Update User Profile View
+
+Modify the `get_user_profile` view in `FinzoBackend/app/views.py` to handle retrieval by display_id:
+
+```python
+@api_view(['GET'])
+def get_user_profile(request, user_id=None):
+    try:
+        # Try to get user by display_id first
+        user = None
+        if user_id:
+            # Check if it's a display_id (starts with 'U')
+            if isinstance(user_id, str) and user_id.startswith('U'):
+                user = CustomUser.objects.filter(display_id=user_id).first()
+            # Try by numeric ID if not found or if user_id is numeric
+            if not user:
+                try:
+                    user_id_int = int(user_id)
+                    user = CustomUser.objects.filter(id=user_id_int).first()
+                except (ValueError, TypeError):
+                    pass
+        
+        # If no user_id provided or not found, get current user
+        if not user and request.user.is_authenticated:
+            user = request.user
+            
+        if not user:
+            return Response({"error": "User not found"}, status=404)
+            
+        serializer = UserSerializer(user, context={'request': request})
+        return Response(serializer.data)
+    except Exception as e:
+        return Response({"error": str(e)}, status=500)
+```
+
+### Step 5: Update URLs for user profiles
+
+In `FinzoBackend/app/urls.py`, update the user profile URL pattern:
+
+```python
+urlpatterns = [
+    # ... existing patterns ...
+    path('users/profile/', views.get_user_profile, name='user-profile'),
+    path('users/profile/<str:user_id>/', views.get_user_profile, name='user-profile-by-id'),
+    # ... other URLs ...
+]
+```
+
+### Step 6: Update Other Views That Return User Information
+
+Any view that returns user information should be updated to include the display_id. For example:
+
+```python
+@api_view(['GET'])
+def get_active_users(request):
+    try:
+        users = CustomUser.objects.filter(is_active=True).order_by('-last_login')[:10]
+        serializer = UserSerializer(users, many=True, context={'request': request})
+        return Response(serializer.data)
+    except Exception as e:
+        return Response({"error": str(e)}, status=500)
+```
+
+### Step 7: One-time Script for Existing Users
+
+Create a management command to generate display_ids for existing users:
+
+```python
+# FinzoBackend/app/management/commands/generate_display_ids.py
+from django.core.management.base import BaseCommand
+from app.models import CustomUser
+
+class Command(BaseCommand):
+    help = 'Generate display_ids for existing users'
+
+    def handle(self, *args, **options):
+        users_without_display_id = CustomUser.objects.filter(display_id__isnull=True)
+        self.stdout.write(f"Found {users_without_display_id.count()} users without display_id")
+        
+        for user in users_without_display_id:
+            # save() will generate the display_id
+            user.save()
+            self.stdout.write(f"Generated display_id {user.display_id} for user {user.username}")
+        
+        self.stdout.write(self.style.SUCCESS('Successfully generated display_ids'))
+```
+
+Run the command:
+
+```bash
+python manage.py generate_display_ids
+```
+
+## 3. Frontend Implementation
+
+### Step 1: Update API Service
+
+Update your API service to use the new display_id:
+
+```typescript
+// src/services/api.ts
+export const userApi = {
+  getUserProfile: async (userId?: string) => {
+    const url = userId 
+      ? `/api/users/profile/${userId}/` 
+      : '/api/users/profile/';
+    
+    return fetch(url, {
+      headers: {
+        'Authorization': `Bearer ${getToken()}`
+      }
+    }).then(res => {
+      if (!res.ok) throw new Error('Failed to fetch user profile');
+      return res.json();
+    });
+  },
+  
+  // Other API methods
+};
+```
+
+### Step 2: Update User Profile Component
+
+```tsx
+// src/pages/UserProfile.tsx
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { userApi } from '../services/api';
+
+const UserProfile = () => {
+  const { userId } = useParams<{ userId: string }>();
+  const [user, setUser] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchUserProfile = async () => {
+      try {
+        setLoading(true);
+        const userData = await userApi.getUserProfile(userId);
+        setUser(userData);
+      } catch (err) {
+        setError('Failed to load user profile');
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchUserProfile();
+  }, [userId]);
+
+  // Rest of component...
+}
+```
+
+### Step 3: Update Routes
+
+Ensure your routes use the display_id:
+
+```tsx
+// src/App.tsx or src/router.tsx
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import UserProfile from './pages/UserProfile';
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        {/* Other routes */}
+        <Route path="/users/:userId" element={<UserProfile />} />
+        {/* More routes */}
+      </Routes>
+    </BrowserRouter>
+  );
+};
+```
+
+### Step 4: Update User Links
+
+Update any user links to use the display_id:
+
+```tsx
+// In components that link to user profiles
+import { Link } from 'react-router-dom';
+
+const UserItem = ({ user }) => {
+  return (
+    <div className="user-item">
+      <Link to={`/users/${user.display_id}`}>
+        <img src={user.profile_picture} alt={user.username} />
+        <span>{user.username}</span>
+      </Link>
+    </div>
+  );
+};
+```
+
+## 4. Testing the Implementation
+
+### Backend Testing
+
+1. Verify that existing users have display_ids after running the migration and script
+2. Create a new user and confirm a display_id is automatically generated
+3. Test retrieving users by both database ID and display_id
+4. Check that all API endpoints return the display_id in user objects
+
+### Frontend Testing
+
+1. Test user profile navigation using the new display_id URL format
+2. Verify that all user links point to the correct profile
+3. Check that the user profile information is correctly displayed
+4. Test that direct URL navigation to user profiles works with the new ID format
+
+## 5. Security Considerations
+
+1. Continue to use numeric IDs internally in the database for primary keys
+2. Ensure proper authorization checks when accessing user profiles
+3. Validate display_id format in API requests (should match pattern 'U\d{5}')
+4. Consider rate limiting profile views to prevent scraping
+
+## 6. Additional Enhancements (Optional)
+
+1. Add search functionality by display_id
+2. Create a vanity URL system where users can customize their profile URLs
+3. Add caching for frequently accessed user profiles
+4. Implement pagination for large user lists
+
+This implementation provides a user-friendly ID system while maintaining compatibility with Django's authentication system. The display_id field allows for a clean, human-readable format while keeping the benefits of Django's integer primary keys.
+============================================================ 

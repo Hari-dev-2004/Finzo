@@ -1,0 +1,7 @@
+name,interest_rate,min_investment,duration,risk,taxation,type,premature_withdrawal
+Fixed Deposit,6.5,10000,1 year,Low,Interest taxable as per income tax slab,FD,Allowed with penalty
+Recurring Deposit,6.0,5000,1 year,Low,Interest taxable as per income tax slab,RD,Allowed with penalty
+Public Provident Fund,7.1,500,15 years,Low,Tax-free interest and EEE status,PPF,Partial withdrawal allowed after 7 years
+National Savings Certificate,6.8,1000,5 years,Low,"Interest taxable, but eligible for tax deduction",NSC,Not allowed
+Corporate Bonds,8.0,10000,3 years,Medium,Interest taxable as per income tax slab,BOND,Depends on bond terms
+Government Securities,7.5,10000,5 years,Low,Interest taxable as per income tax slab,G-SEC,Can be sold in secondary market

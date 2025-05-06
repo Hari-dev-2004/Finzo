@@ -1,0 +1,152 @@
+============================================================
+FIX FOR IMAGE LOADING ISSUES IN FRONTEND
+============================================================
+
+The issue with images not loading could be due to multiple reasons:
+
+1. Image URLs are incorrect or malformed
+2. Images are not being served properly from the backend
+3. Error handling for missing images is insufficient
+
+Here are fixes for each component where images might be causing issues:
+
+## 1. UserProfile Component
+
+Add better error handling for profile images:
+
+```tsx
+<Avatar
+  className="h-24 w-24 border-2 border-primary"
+  src={user?.profile_picture || ''}
+  alt={user?.display_name || 'User'}
+  fallback={
+    <div className="flex h-full w-full items-center justify-center bg-muted text-xl font-semibold uppercase">
+      {user?.display_name?.charAt(0) || 'U'}
+    </div>
+  }
+/>
+```
+
+## 2. CommunityDiscussions Component
+
+Update the post image rendering with error handling:
+
+```tsx
+{post.image && (
+  <div className="relative mt-2 overflow-hidden rounded-md">
+    <img 
+      src={post.image} 
+      alt="Post media" 
+      className="w-full object-cover"
+      onError={(e) => {
+        // On error, hide the image container
+        e.currentTarget.parentElement.style.display = 'none';
+      }}
+    />
+  </div>
+)}
+```
+
+## 3. UserAvatar Component (create or modify if it exists)
+
+```tsx
+// Create a reusable component for user avatars with error handling
+const UserAvatar = ({ user, size = 'md' }) => {
+  const sizeClasses = {
+    sm: 'h-8 w-8',
+    md: 'h-10 w-10',
+    lg: 'h-16 w-16',
+    xl: 'h-24 w-24'
+  };
+  
+  return (
+    <Avatar
+      className={`${sizeClasses[size]} border border-border`}
+      src={user?.profile_picture || ''}
+      alt={user?.display_name || user?.username || 'User'}
+      fallback={
+        <div className="flex h-full w-full items-center justify-center bg-muted text-center font-semibold uppercase">
+          {(user?.display_name || user?.username || 'U').charAt(0)}
+        </div>
+      }
+    />
+  );
+};
+```
+
+## 4. Fix image URLs in API responses
+
+Make sure the backend is returning full URLs for images. In your Django views:
+
+```python
+# In your serializers.py
+class UserSerializer(serializers.ModelSerializer):
+    profile_picture = serializers.SerializerMethodField()
+    
+    def get_profile_picture(self, obj):
+        if obj.profile_picture:
+            request = self.context.get('request')
+            if request:
+                return request.build_absolute_uri(obj.profile_picture.url)
+        return None
+```
+
+## 5. Add global image error handler in your main app
+
+Add this to your main layout component or App.tsx:
+
+```tsx
+useEffect(() => {
+  // Global image error handler
+  const handleImageError = (event) => {
+    const img = event.target;
+    if (img.src && !img.src.includes('fallback')) {
+      // Replace with a fallback or hide
+      img.style.display = 'none';
+      // Or set a fallback image
+      // img.src = '/images/fallback.png';
+    }
+  };
+
+  // Add the event listener to the document
+  document.addEventListener('error', handleImageError, true);
+  
+  return () => {
+    document.removeEventListener('error', handleImageError, true);
+  };
+}, []);
+```
+
+## 6. Check Image Loading in Network Tab
+
+In your browser's developer tools, look at the Network tab when loading the app:
+- Filter by "Img" to see image requests
+- Check for any requests that return errors (status codes other than 200 or 304)
+- Verify that image URLs are correct and accessible
+
+## 7. Update fetch calls to handle image uploads properly
+
+Ensure FormData is being used correctly for image uploads:
+
+```tsx
+const handleCreatePost = async () => {
+  if (!newPostContent.trim() && !selectedImage) return;
+  
+  try {
+    const formData = new FormData();
+    formData.append('content', newPostContent);
+    
+    if (selectedImage) {
+      formData.append('image', selectedImage);
+    }
+    
+    const response = await createPost(formData);
+    // Handle response...
+  } catch (error) {
+    console.error('Error creating post:', error);
+  }
+};
+```
+
+These changes will make your app more resilient to image loading issues and provide better fallbacks when images fail to load.
+============================================================ 
